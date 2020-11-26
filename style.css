@@ -1,0 +1,72 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #E7ECEF;
+}
+h1{
+    text-align: center;
+    color: #0e1721;
+}
+.loginbox, .registerbox{
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(96, 150, 186,0.3);
+    border-radius: 15px;
+    width: 400px;
+}
+.loginbox .inner, .registerbox .inner{
+    margin: 0 auto;
+   
+}
+.label, .input, .button{
+    margin-bottom: 10px;
+}
+.label{
+    font-weight: 600;
+    color: #0e1721;
+}
+.button a, .button input[type=submit]{
+    border: none;
+    outline: none;
+    background-color: #274c77;
+    color: #e7ecef;
+    text-transform: none;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.bigger{
+    margin-top: 20px;
+}
+.header{
+    background-color: #759ebf;
+    width: 96.77%;
+    color: #0e1721;
+    padding: 20px;
+}
+.userbox{
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.recipe{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.recipe .inner{
+    width: 500px;
+    margin: 0 auto;
+    background-color: rgba(96, 150, 186,0.5);
+    color: #0e1721;
+    padding: 15px;
+    border-radius: 15px;
+}
+textarea{
+    width: 100% !important;
+}
