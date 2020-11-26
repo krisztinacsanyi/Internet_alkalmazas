@@ -17,7 +17,7 @@
             <a href="">Kijelentkezés</a>
         </div>
     </div>
-    <h1>Recept szerkesztése</h1>
+    <h1>Blogposzt szerkesztése</h1>
 
 
     <div class="recipebox">
@@ -26,11 +26,7 @@
                 <div class="input">
                     <input type="text" name="title" id="title" placeholder="Cím">
                 </div>
-                <h3>Összetevők:</h3>
-                <textarea name="description" id="description" rows="5" placeholder="Írja ide az összetevőket enterrel elválasztva">
-
-                </textarea>
-                <h3>Leírás</h3>
+                <h3>Szöveg</h3>
                 <textarea name="description" id="description" rows="10" placeholder="Írja ide a leírást">
 
                 </textarea>

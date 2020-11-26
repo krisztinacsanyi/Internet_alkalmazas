@@ -17,20 +17,15 @@
             <a href="">Kijelentkezés</a>
         </div>
     </div>
-    <h1>Receptek</h1>
+    <h1>Posztok</h1>
 
 
     <div class="recipebox">
         <div class="recipe">
             <div class="inner">
                 <p>
-                    <h2>Recept neve</h2>
-                    <h3>Összetevők:</h3>
-                    - összetevő<br>
-                    - összetevő<br>
-                    - összetevő<br>
-                    - összetevő<br>
-                    <h3>Leírás:</h3>
+                    <h2>Cím</h2>
+                    <h3>Alcím</h3>
                     At, facere quasi obcaecati autem dignissimos eligendi et commodi repudiandae ad voluptatum assumenda voluptas eveniet ducimus debitis incidunt cumque! 
                     Reprehenderit voluptate a, temporibus praesentium, autem architecto numquam beatae distinctio culpa, doloribus totam? 
                     Explicabo ex tenetur quas excepturi, quos nisi cumque reiciendis repellendus quod placeat repellat eum rem quisquam soluta incidunt doloribus dolor.
@@ -44,13 +39,8 @@
         <div class="recipe">
             <div class="inner">
                 <p>
-                    <h2>Recept neve</h2>
-                    <h3>Összetevők:</h3>
-                    - összetevő<br>
-                    - összetevő<br>
-                    - összetevő<br>
-                    - összetevő<br>
-                    <h3>Leírás:</h3>
+                    <h2>Cím</h2>
+                    <h3>Alcím</h3>
                     At, facere quasi obcaecati autem dignissimos eligendi et commodi repudiandae ad voluptatum assumenda voluptas eveniet ducimus debitis incidunt cumque! 
                     Reprehenderit voluptate a, temporibus praesentium, autem architecto numquam beatae distinctio culpa, doloribus totam? 
                     Explicabo ex tenetur quas excepturi, quos nisi cumque reiciendis repellendus quod placeat repellat eum rem quisquam soluta incidunt doloribus dolor.

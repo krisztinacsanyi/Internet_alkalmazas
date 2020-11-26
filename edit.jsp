@@ -26,14 +26,7 @@
                 <div class="input">
                     <input type="text" name="title" id="title" value="Cím">
                 </div>
-                <h3>Összetevők:</h3>
-                <textarea name="description" id="description" rows="5">
-- összetevő
-- összetevő 
-- összetevő
-- összetevő
-                </textarea>
-                <h3>Leírás</h3>
+                <h3>Szöveg:</h3>
                 <textarea name="description" id="description" rows="10">
 At, facere quasi obcaecati autem dignissimos eligendi et commodi repudiandae ad voluptatum assumenda voluptas eveniet ducimus debitis incidunt cumque! Reprehenderit voluptate a, temporibus praesentium, autem architecto numquam beatae distinctio culpa, doloribus totam? Explicabo ex tenetur quas excepturi, quos nisi cumque reiciendis repellendus quod placeat repellat eum rem quisquam soluta incidunt doloribus dolor.
                 </textarea>
