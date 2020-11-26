@@ -1,0 +1,4 @@
+Elvileg a textarea eltárolja az entereket, csak kiíratáskor csúszik el
+itt van rá megoldás: https://stackoverflow.com/questions/498461/how-to-save-user-entered-line-breaks-from-a-textarea-to-a-database
+
+Az összetevőket csak ilyen bénán, kézzel beírva tudtam beírni, hogy ne kelljen feldolgozni és ul-ok, li-k közé amit beírt a user. De szerintem ez nem is fontos
