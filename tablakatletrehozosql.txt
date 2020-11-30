@@ -1,0 +1,14 @@
+create table "INTALK".USERS
+(
+	USERNAME VARCHAR(15) not null primary key,
+	EMAIL VARCHAR(50) not null,
+	PASSWORD VARCHAR(50) not null
+)
+
+create table "INTALK".POSTS
+(
+	POST_ID INTEGER default AUTOINCREMENT: start 1 increment 1 not null,
+	USERNAME VARCHAR(24) not null,
+	TEXT VARCHAR(30000) not null,
+	TITLE VARCHAR(100)
+)
