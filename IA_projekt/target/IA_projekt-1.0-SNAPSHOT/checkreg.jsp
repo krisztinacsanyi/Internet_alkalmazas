@@ -15,7 +15,10 @@
         </jsp:forward>
     </c:when>
     <c:otherwise>
-
+           <% System.out.println("1. pont");%>
+           <c:set var="errorUsername" value="false" scope="request"/>
+           <c:set var="errorEmail" value="false" scope="request"/>
+           <c:set var="errorPw" value="false" scope="request"/>
         <c:if test="${(fn:length(param.username) < 3)}">
             <c:set var="errorUsername" value="Minimum 3 karakter" scope="request"/>
         </c:if>
@@ -27,15 +30,15 @@
         </c:if>
 
         <c:choose>
-            <c:when test="${!errorUsername.isEmpty() || !errorEmail.isEmpty() || !errorPw.isEmpty()}">
+            <c:when test="${errorUsername!='false'|| errorEmail!='false' || errorPw!='false'}">
                 <jsp:forward page="register.jsp"/>
             </c:when>
             <c:otherwise>
                 <sql:query var="userExists" dataSource="${users}">
-                    SELECT * FROM Users where username='${param.username}
+                    SELECT * FROM Users where username='${param.username}'
                 </sql:query>
                 <c:choose>
-                    <c:when test="${success.rowCount != 0 }">
+                    <c:when test="${userExists.rowCount != 0 }">
                         <c:set var="errorUsername" value="Ez a felhasználónév már foglalt" scope="request"/>
                     </c:when>
                     <c:otherwise>
