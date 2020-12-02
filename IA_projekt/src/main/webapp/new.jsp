@@ -4,6 +4,12 @@
 <%
     request.setCharacterEncoding("UTF-8");
     response.setCharacterEncoding("UTF-8");
+    if(session.getAttribute("validuser")==null){
+        %>
+        <jsp:forward page="login.jsp">
+            <jsp:param name="errorMsg" value="Kérjük jelentkezzen be!"/>
+        </jsp:forward>
+<%   } 
 %>
 <!DOCTYPE html>
 
@@ -19,6 +25,9 @@
         <div class="userbox">
             Üdvözöljük, <span><!--Ide lehet írni a nevét--></span>
         </div>
+        <div class="button">
+            <a href="main.jsp">Vissza a főoldalra</a>
+        </div> 
         <div class="button">
             <a href="logout.jsp">Kijelentkezés</a>
         </div>

@@ -2,7 +2,16 @@
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <!--<%@page contentType="text/html" pageEncoding="UTF-8"%>-->
 <!DOCTYPE html>
-
+<%
+    request.setCharacterEncoding("UTF-8");
+    response.setCharacterEncoding("UTF-8");
+    if(session.getAttribute("validuser")==null){
+        %>
+        <jsp:forward page="login.jsp">
+            <jsp:param name="errorMsg" value="Kérjük jelentkezzen be!"/>
+        </jsp:forward>
+<%   } 
+%>
 <sql:setDataSource 
     var="users"
     driver="org.apache.derby.jdbc.ClientDriver"
@@ -29,13 +38,12 @@
         <div class="button">
             <a href="new.jsp">Új post létrehozása</a>
         </div>
-        <div class="succsessMsg">${param.succsess}</div>
         <div class="button">
             <a href="logout.jsp">Kijelentkezés</a>
-        </div>
-            
+        </div>            
     </div>
-    <% } %>    
+    <% } %>
+<center><div class="succsessrow">${param.succsess}</div></center>
     <h1>Posztok</h1>    
     <sql:query var="post_list" dataSource="${users}">
         SELECT * FROM POSTS WHERE USERNAME='<%=session.getAttribute("validuser")%>'

@@ -77,3 +77,8 @@ textarea{
 .succsessMsg{
     color: lightgreen;
 }
+.succsessrow{
+    text-align: center;
+    width: 100% !important;
+    background-color: lightgreen;
+}
