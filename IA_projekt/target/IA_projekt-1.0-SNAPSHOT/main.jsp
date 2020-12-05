@@ -77,7 +77,7 @@
                         <div class="inner">                
                                 <h2><c:out value="${post.title}" /></h2>
                                 <p><c:out value="${post.text}" /></p>
-                                <c:if test="${current_user == post.username}">
+                                <c:if test="${current_user == post.username || current_user=='admin'}">
                                 
                                 <div class="button">
                                     <form action="edit.jsp">
