@@ -23,7 +23,7 @@
 <body>
     <div class="header">
         <div class="userbox">
-            Üdvözöljük, <span><!--Ide lehet írni a nevét--></span>
+            Üdvözöljük, <span><%=session.getAttribute("validuser") %>!</span>
         </div>
         <div class="button">
             <a href="main.jsp">Vissza a főoldalra</a>
