@@ -6,18 +6,17 @@
     request.setCharacterEncoding("UTF-8");
     response.setCharacterEncoding("UTF-8");
     Boolean user_posts=false;
-    if(request.getParameter("filter_user")==null){
+    if(request.getParameter("filter_user")==null){ // alapértelmezetten az összes postot megjelenítjük
              user_posts=false;
-    }else{
+    }else{ // ha rákattint a saját posztok megjelenítésére akkor a user_posts igaz
         user_posts=true;
     }
-    if(session.getAttribute("validuser")==null){
+    if(session.getAttribute("validuser")==null){ // ha nincs bejelentkezve visszairányítjuk
         %>
         <jsp:forward page="login.jsp">
             <jsp:param name="errorMsg" value="Kérjük jelentkezzen be!"/>
         </jsp:forward>
-<%   } 
-%>
+<%   } %>
 <sql:setDataSource 
     var="users"
     driver="org.apache.derby.jdbc.ClientDriver"
@@ -60,9 +59,9 @@
         </div>            
     </div>
     <% } %>
-<center><div class="succsessrow">${param.succsess}</div></center>
+<center><div class="succsessrow">${param.succsess}</div></center> <!-- Bejelentkezett felhasználó megjelenítése --->
     <h1>Posztok</h1>
-    <% if(user_posts){ %>
+    <% if(user_posts){ // ha szűrjük a userekre akkor más az sql mint amikor nem szűrjük %>
     <sql:query var="post_list" dataSource="${users}">
         SELECT * FROM POSTS WHERE USERNAME='<%=session.getAttribute("validuser")%>'
     </sql:query>
@@ -72,13 +71,13 @@
     </sql:query>
     <% } %>    
         <div class="recipebox">
-            <c:forEach var="post" items="${post_list.rows}">
+            <c:forEach var="post" items="${post_list.rows}"> <!-- Végigmegyünk a lekérdezés eredményén -->
                     <div class="recipe">
                         <div class="inner">                
                                 <h2><c:out value="${post.title}" /></h2>
                                 <p><c:out value="${post.text}" /></p>
-                                <c:if test="${current_user == post.username || current_user=='admin'}">
-                                
+                                <c:if test="${current_user == post.username || current_user=='admin'}"> <!-- ha a user postolta
+                                                                                                        vagy admin a felhasználó, megjelenítjük a szerkesztés és törlést -->                                
                                 <div class="button">
                                     <form action="edit.jsp">
                                         <input type="hidden" value="${post.post_id}" name="post_id">

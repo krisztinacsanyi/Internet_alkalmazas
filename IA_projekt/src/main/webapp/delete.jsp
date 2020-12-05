@@ -17,7 +17,7 @@
     password="ckfjsa"
     scope="session" />
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+<% //A törlés post_id alapján     %>
 <sql:update var="delete" dataSource="${posts}">
     DELETE FROM POSTS
     WHERE POST_ID = <%= request.getParameter("post_id")%>

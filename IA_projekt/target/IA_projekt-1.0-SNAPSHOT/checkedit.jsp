@@ -34,7 +34,7 @@
            </jsp:forward>
     </c:when>
     <c:otherwise>
-       <%
+       <% // változók beállítása és az update
          String title=request.getParameter("title");
          String text=request.getParameter("description");
          String username=session.getAttribute("validuser").toString(); %>
