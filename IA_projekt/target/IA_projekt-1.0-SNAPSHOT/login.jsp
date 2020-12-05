@@ -11,7 +11,7 @@
 
 <!--<%@page contentType="text/html" pageEncoding="UTF-8"%>-->
 <!DOCTYPE html>
-   <% if(session.getAttribute("validuser")!=null){ // ha nincs bejelentkezve visszairányítjuk
+   <% if(session.getAttribute("validuser")!=null){ // ha be van jelentkezve
         %>
         <jsp:forward page="main.jsp" />
 <%   } %>
