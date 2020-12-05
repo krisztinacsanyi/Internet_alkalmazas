@@ -18,7 +18,7 @@
         </jsp:forward>
  </c:when>
 <c:otherwise>
-    <%
+    <% //változók beállítása és az új post felvétele
       String title=request.getParameter("title");
       String text=request.getParameter("description");
       String username=session.getAttribute("validuser").toString(); %>
