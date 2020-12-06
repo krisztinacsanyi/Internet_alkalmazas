@@ -1,2 +1,1 @@
-Elvileg a textarea eltárolja az entereket, csak kiíratáskor csúszik el
-itt van rá megoldás: https://stackoverflow.com/questions/498461/how-to-save-user-entered-line-breaks-from-a-textarea-to-a-database
+Github link: https://github.com/krisztinacsanyi/Internet_alkalmazas
